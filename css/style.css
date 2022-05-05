@@ -282,9 +282,9 @@ address {
   margin-bottom: 9px;
 }
 
-.social {
+/* .social {
   margin-right: 93px;
-}
+} */
 .social-text,
 .subscribe-text {
   margin-bottom: 20px;
@@ -330,7 +330,9 @@ address {
 .social-icon {
   fill: currentColor;
 }
-
+.subscribe {
+  margin-left: auto;
+}
 .subscribe-wraper {
   display: flex;
   align-items: center;
@@ -342,9 +344,10 @@ address {
   padding-bottom: 15px;
   padding-left: 16px;
   margin-right: 12px;
+
+  color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -816,11 +819,13 @@ address {
   color: var(--accent-color);
 }
 
+/* ------------- MODAL FORM -------------*/
+
 .modal-form {
   padding: 40px 41px;
 }
 
-.form-text {
+.form-title {
   margin-bottom: 12px;
   text-align: center;
 
@@ -835,6 +840,7 @@ address {
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin-bottom: 10px;
   color: #000;
   transition: color 250ms var(--cubic-bezier);
@@ -842,6 +848,13 @@ address {
 
 .label:focus-within {
   color: var(--accent-color);
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: currentColor;
 }
 
 .label-name {
@@ -858,27 +871,17 @@ address {
   background-color: #ffffff;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border 250ms var(--cubic-bezier),
-    box-shadow 250ms var(--cubic-bezier);
+  transition: border 250ms var(--cubic-bezier);
 }
 
-.label:focus-within input {
+.label:focus-within > input {
   outline: none;
   border: 1px solid var(--accent-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.input-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  fill: currentColor;
 }
 
 textarea {
   height: 120px;
-  padding: 12px 16px 12px 16px;
+  padding: 12px 16px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
@@ -887,21 +890,19 @@ textarea {
   border-radius: 4px;
   resize: none;
 }
+
 textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
 .textarea-label {
   margin-bottom: 20px;
-  transition: border 250ms var(--cubic-bezier),
-    box-shadow 250ms var(--cubic-bezier);
+  transition: border 250ms var(--cubic-bezier);
 }
 
 .textarea-label:focus-within textarea {
   outline: none;
   border: 1px solid var(--accent-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .form-btn {
@@ -914,6 +915,7 @@ textarea::placeholder {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -940,8 +942,11 @@ textarea::placeholder {
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  line-height: 1.71;
   color: var(--checkbox-text-color);
+}
+
+.checkbox-text {
+  line-height: 1.71;
 }
 
 .checkbox-input {
@@ -949,44 +954,27 @@ textarea::placeholder {
 }
 
 .checkbox-box {
-  position: relative;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
+  display: flex;
   width: 16px;
   height: 15px;
+  align-items: center;
+  justify-content: center;
   margin-right: 8px;
   border: 2px solid #212121;
   border-radius: 2px;
+  transition: border-color 250ms var(--cubic-bezier),
+    background-color 250ms var(--cubic-bezier);
 }
-
-/* .checkbox-input:focus-within ~ .checkbox-box {
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
-} */
 
 .checkbox-input:checked ~ .checkbox-box {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
 }
 
-.checkbox-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  opacity: 0;
-  transition: opacity 250ms var(--cubic-bezier);
-}
-
-.checkbox-input:checked ~ .checkbox-box > .checkbox-icon {
-  opacity: 1;
+.checkbox-input:focus + .checkbox-box {
+  border-color: var(--accent-color);
 }
 
 .contract {
-  display: block;
-  margin-left: 2px;
   color: var(--accent-color);
-  text-decoration: underline;
 }
