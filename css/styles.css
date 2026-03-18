@@ -573,8 +573,12 @@ address {
 }
 
 .footer {
-  padding: 100px 0;
+  padding: 96px 0;
   background-color: var(--bg-color);
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
 }
 
 .footer-info-wrapper {
