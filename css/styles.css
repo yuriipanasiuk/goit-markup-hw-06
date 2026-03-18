@@ -140,12 +140,16 @@ button {
 
 /* #region HEADER */
 .header {
-  padding: 24px 0;
+  padding: 16px 0;
   border-bottom: 1px solid #e7e9fc;
   box-shadow:
     0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 2px 1px 0 rgba(46, 47, 66, 0.08);
+
+  @media screen and (min-width: 1158px) {
+    padding: 24px 0;
+  }
 }
 
 header .container {
@@ -264,7 +268,8 @@ address {
 .hero {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 188px 0;
+  padding: 72px 0;
+  /* padding: 188px 0; */
   background-color: var(--bg-color);
   text-align: center;
   background-image:
@@ -278,6 +283,14 @@ address {
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url("../images/people-office@2x.jpg");
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 112px 0;
+  }
+
+  @media screen and (min-width: 1158px) {
+    padding: 188px 0;
   }
 }
 
