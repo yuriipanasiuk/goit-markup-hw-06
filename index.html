@@ -42,6 +42,12 @@
           </ul>
         </nav>
 
+        <button class="menu-button" data-menu-open>
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#burger"></use>
+          </svg>
+        </button>
+
         <address class="header__contacts">
           <ul class="header__contacts-list list">
             <li class="header__contacts-item">
@@ -57,6 +63,85 @@
             </li>
           </ul>
         </address>
+
+        <div class="menu" data-menu>
+          <div class="menu-wrapper">
+            <button type="button" data-menu-close class="close-button">
+              <svg width="8" height="8" class="close-icon">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+
+            <ul class="menu-list list">
+              <li class="menu-item">
+                <a href="./index.html" class="menu-link active-link">Studio</a>
+              </li>
+
+              <li class="menu-item">
+                <a href="" class="menu-link">Portfolio</a>
+              </li>
+
+              <li class="menu-item">
+                <a href="" class="menu-link">Contacts</a>
+              </li>
+            </ul>
+
+            <div class="menu-contacts">
+              <address class="menu__contacts-address">
+                <ul class="menu__contacts-list list">
+                  <li class="menu__contacts-item">
+                    <a
+                      href="mailto:info@devstudio.com"
+                      class="menu__contacts-link"
+                    >
+                      info@devstudio.com
+                    </a>
+                  </li>
+
+                  <li class="menu__contacts-item">
+                    <a href="tel:+110001111111" class="menu__contacts-link">
+                      +11 (000) 111-11-11
+                    </a>
+                  </li>
+                </ul>
+              </address>
+
+              <ul class="social-list list">
+                <li class="social-item">
+                  <a href="" class="social-link">
+                    <svg width="16" height="16" class="icons">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social-item">
+                  <a href="" class="social-link">
+                    <svg width="16" height="16" class="icons">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social-item">
+                  <a href="" class="social-link">
+                    <svg width="16" height="16" class="icons">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social-item">
+                  <a href="" class="social-link">
+                    <svg width="16" height="16" class="icons">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -175,7 +260,7 @@
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg width="16" height="16" class="icons">
-                        <use href="./images/icons.svg#icon-icon-facebook"></use>
+                        <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
@@ -183,7 +268,7 @@
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg width="16" height="16" class="icons">
-                        <use href="./images/icons.svg#icon-icon-linkedin"></use>
+                        <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -586,7 +671,7 @@
 
     <div class="backdrop" data-modal>
       <div class="modal">
-        <button type="button" data-modal-close class="close-modal-button">
+        <button type="button" data-modal-close class="close-button">
           <svg width="8" height="8" class="close-icon">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
