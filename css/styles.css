@@ -552,7 +552,7 @@ address {
   display: flex;
   align-items: baseline;
   flex-direction: column;
-  gap: 72px;
+  gap: 80px;
 
   @media screen and (min-width: 1158px) {
     flex-direction: row;
@@ -631,12 +631,6 @@ address {
 
 .social-footer-list {
   gap: 16px;
-}
-
-.subscribe {
-  @media screen and (min-width: 768px) {
-    margin-left: 60px;
-  }
 }
 
 .subscribe-title {
@@ -993,7 +987,6 @@ address {
 }
 
 .menu-contacts {
-
   margin-top: auto;
 }
 
